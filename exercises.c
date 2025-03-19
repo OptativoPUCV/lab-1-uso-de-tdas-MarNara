@@ -65,7 +65,7 @@ int sumaLista(List *L) {
    int tamanoLista = get_size(L);
    int* elemento = first(L);
    for(int k = 0; k < tamanoLista; k++){
-      suma += *elemento;
+      suma += *elemento;// era nesesario desreferenciar :)
       elemento = next(L);
 
    }
@@ -82,7 +82,14 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-
+   int tamanoLista = get_size(L);
+   int *elemento = first(L);
+   for(int k = 0; k < tamanoLista; k++){
+      if(*elemento == elem){
+         popCurrent(L);
+      }
+      elemento = next(L);
+   }
 }
 
 /*
