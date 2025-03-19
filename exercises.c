@@ -63,7 +63,7 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) {
    int suma = 0;
    int tamanoLista = get_size(L);
-   for(int k = 0; k < tamanoLista; k++){
+   for(int k = 0; k <= tamanoLista; k++){
       suma+= k;
    }
    return suma;
