@@ -43,14 +43,14 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   void* elemento = first(L);
+   //void* elemento = first(L);
    for(int k = 1; k <= 10; k++){
       int* valorDeK = (int*)malloc(sizeof(int));
       if(valorDeK == NULL) EXIT_FAILURE;
       *valorDeK = k; //este valor esta apuntando a k
       //elemento1 = first(L);
       pushBack(L, valorDeK);// VA EL VALOR DE K O PODRIA reservar memoria directamente en cada k?
-      elemento = next(L);
+      //elemento = next(L);
    }
    /**/
    
