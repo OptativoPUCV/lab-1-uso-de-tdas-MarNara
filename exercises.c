@@ -49,9 +49,10 @@ List* crea_lista() {
       if(valorDeK == NULL) EXIT_FAILURE;
       *valorDeK = k; //este valor esta apuntando a k
       //elemento1 = first(L);
-      void pushBack(L, valorDeK);// VA EL VALOR DE K O PODRIA reservar memoria directamente en cada k?
+      pushBack(L, valorDeK);// VA EL VALOR DE K O PODRIA reservar memoria directamente en cada k?
       elemento = next(L);
    }
+   /**/
    
    return L;
 }
