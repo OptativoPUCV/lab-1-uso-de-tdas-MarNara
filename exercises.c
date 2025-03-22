@@ -161,6 +161,20 @@ int parentesisBalanceados(char *cadena) {
    for(int k = 0; k < mitadPila2; k++){
       void *elem = top(auxPila);// devuelve un puntero
       push(P2, elem);
+      top(auxPila);
+   }
+
+   for(int k = 0; k < cont; k++){
+      char *elem1 = top(P1);
+      char *elem2 = top(P2);
+
+      if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+         return 1;
+      }
+      else{
+         return 0;
+      }
+
    }
 
 

@@ -182,3 +182,35 @@ sá., 22 de mar. de 2025 20:17:28:
  tests:  4|1
 total_score: 50/70
 14d06ef
+sá., 22 de mar. de 2025 20:34:39: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:171:16: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                ^~
+exercises.c:171:32: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                ^~
+exercises.c:171:48: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                                ^~
+exercises.c:171:64: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                                                ^~
+exercises.c:171:23: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+exercises.c:171:80: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                                                                ^~
+exercises.c:171:96: error: comparison between pointer and integer [-Werror]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                                                                                ^~
+exercises.c:171:87: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+       if(elem1 == '(' && elem2 == ')' || elem1 == '{' && elem2 == '}' || elem1 == '[' && elem2 == ']'){
+                                                                          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c9296df
