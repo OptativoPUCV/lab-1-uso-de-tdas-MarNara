@@ -324,3 +324,9 @@ sá., 22 de mar. de 2025 20:48:35:
  tests:  5|1
 total_score: 50/70
 fed2ebc
+sá., 22 de mar. de 2025 20:49:08: 
+ exercises.c | 3 ---
+ 1 file changed, 3 deletions(-)
+ tests:  5|1
+total_score: 50/70
+161c823
