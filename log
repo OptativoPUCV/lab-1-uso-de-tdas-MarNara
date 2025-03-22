@@ -142,3 +142,17 @@ vi., 21 de mar. de 2025 23:52:23:
  tests:  4|1
 total_score: 50/70
 ca239fc
+sá., 22 de mar. de 2025  0:24:51: 
+ exercises.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:136:23: error: comparison between pointer and integer [-Werror]
+    while(cadena[cont] != NULL){
+                       ^~
+exercises.c:145:20: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+       void *elem = cadena[k];// devuelve un puntero
+                    ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+00d37d7

@@ -126,6 +126,27 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   /*pasos: primero debo crear una pila1 que
+   guarde la mitad de los elementos (se que llega a 
+   la mitad con un contador de elementos) y una pila2 
+   crear una pila auxiliar y ahi dar vuelta una de las pilas*/
+   
+   //int largoCadena = strlen(cadena);
+   int cont = 0; 
+   while(cadena[cont] != NULL){
+      cont++;
+   }
+
+  // Stack *auxPila = create_stack();
+   Stack *P1 = create_stack();
+   //Stack *P2 = create_stack();
+   int mitad = cont/2;
+   for(int k = 0; k <= mitad; k++){
+      void *elem = cadena[k];// devuelve un puntero
+      push(P1, elem);// me falta un dato
+   }
+
+
    return 0;
 }
 
