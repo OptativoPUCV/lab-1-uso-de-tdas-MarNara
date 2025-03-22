@@ -100,6 +100,20 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack*P1, Stack* P2) {
+   Stack *auxPila = create_stack();
+   while(top(P1) != NULL){
+      void *elem = top(P1);// devuelve un puntero
+      push(auxPila, elem);// me falta un dato
+      pop(P1);
+   }
+
+   while(top(auxPila) != NULL){
+      void *elem = top(auxPila);// devuelve un puntero
+      push(P2, elem);// me falta un dato
+      pop(auxPila);
+   }
+
+
 }
 
 /*
