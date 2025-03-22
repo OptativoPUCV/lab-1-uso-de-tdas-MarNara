@@ -164,20 +164,18 @@ int parentesisBalanceados(char *cadena) {
       pop(auxPila);
    }
 
-   for(int k = 0; k < cont; k++){
+   for(int k = 0; k < mitad; k++){
       char *elem1 = top(P1);
       char *elem2 = top(P2);
 
       if((elem1 == '(' && elem2 == ')') || (elem1 == '{' && elem2 == '}') || (elem1 == '[' && elem2 == ']')){
-         pop(P1);
-         pop(P2);
          return 1;
       }
       else{
-         pop(P1);
-         pop(P2);
          return 0;
       }
+      pop(P1);
+      pop(P2);
 
    }
 
