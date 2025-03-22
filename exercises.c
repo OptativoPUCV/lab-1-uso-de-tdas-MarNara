@@ -137,14 +137,33 @@ int parentesisBalanceados(char *cadena) {
       cont++;
    }
 
-  // Stack *auxPila = create_stack();
+   Stack *auxPila = create_stack();
    Stack *P1 = create_stack();
-   //Stack *P2 = create_stack();
+   Stack *P2 = create_stack();
+
    int mitad = cont/2;
-   for(int k = 0; k <= mitad; k++){
-      char *elem = &cadena[k];// devuelve un puntero
-      push(P1, elem);// me falta un dato
+   //agregar datos a pila 1.
+   for(int k = 0; k < mitad; k++){
+      char *carac = &cadena[k];//sacar el caracter
+      push(P1, carac);// agregar el caracter
    }
+   
+   int contadorPila2 = 0;
+   //agregar datos a una pila vacia auxiliar.
+   for(int k = 0; k < cont; k++){
+      char *carac = &cadena[k];//sacar el caracter
+      push(auxPila, carac);// agregar todos los caracteres
+      contadorPila2++;
+   }
+
+   int mitadPila2 = contadorPila2 / 2;
+   //agregar datos a pila 2.
+   for(int k = 0; k < mitadPila2; k++){
+      void *elem = top(auxPila);// devuelve un puntero
+      push(P2, elem);
+   }
+
+
 
 
    return 0;
