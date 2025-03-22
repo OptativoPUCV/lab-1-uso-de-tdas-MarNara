@@ -137,6 +137,9 @@ int parentesisBalanceados(char *cadena) {
       cont++;
    }
 
+   if(cont % 2 == 1){
+      return 0;
+   }
    Stack *auxPila = create_stack();
    Stack *P1 = create_stack();
    Stack *P2 = create_stack();
@@ -169,11 +172,11 @@ int parentesisBalanceados(char *cadena) {
       char *elem2 = top(P2);
 
       if((*elem1 == '(' && *elem2 == ')') || (*elem1 == '{' && *elem2 == '}') || (*elem1 == '[' && *elem2 == ']')){
-         return 1;
-      }
-      pop(P1);
-      pop(P2);
+         pop(P1);
+         pop(P2);
 
+      }
+      return 1;
    }
 
 
