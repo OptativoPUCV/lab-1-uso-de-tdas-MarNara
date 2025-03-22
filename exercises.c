@@ -106,10 +106,12 @@ void copia_pila(Stack*P1, Stack* P2) {
       push(auxPila, elem);// me falta un dato
       pop(P1);
    }
+   
 
    while(top(auxPila) != NULL){
       void *elem = top(auxPila);// devuelve un puntero
       push(P2, elem);// me falta un dato
+      push(P1, elem);
       pop(auxPila);
    }
 
