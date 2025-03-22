@@ -142,7 +142,7 @@ int parentesisBalanceados(char *cadena) {
    //Stack *P2 = create_stack();
    int mitad = cont/2;
    for(int k = 0; k <= mitad; k++){
-      void *elem = cadena[k];// devuelve un puntero
+      char *elem = cadena[k];// devuelve un puntero
       push(P1, elem);// me falta un dato
    }
 
