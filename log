@@ -318,3 +318,9 @@ exercises.c:171:101: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 db4947b
+sá., 22 de mar. de 2025 20:48:35: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|1
+total_score: 50/70
+fed2ebc
