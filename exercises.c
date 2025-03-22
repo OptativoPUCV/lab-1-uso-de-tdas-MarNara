@@ -28,7 +28,7 @@ void imprime_y_vacia_pila(Stack *P) {
    void *dato;
    printf("[");
    while((dato = pop(P)) != NULL) {
-      printf("%d ", (int)dato);
+      printf("%d ", *(int*)dato);
    }
    printf("]\n");
 }
@@ -43,14 +43,15 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-
-   for(int i = 1; i <=10; i++)
-   {
-      int* num = (int*) malloc(sizeof(int));
-      *(num) = i;
-      pushBack(L, num);
-
+   for(int k = 1; k <= 10; k++){
+      int* valorDeK = (int*)malloc(sizeof(int));
+      if(valorDeK == NULL) EXIT_FAILURE;
+      *valorDeK = k; //este valor esta apuntando a k
+      pushBack(L, valorDeK);
+      
    }
+   /**/
+   
    return L;
 }
 
@@ -61,12 +62,12 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
    int suma = 0;
-   int total = get_size(L);
-   int* dato = first(L);
-   for(int k = 0; k < total; k++)
-   {
-      suma += *dato;
-      dato = next(L);
+   int tamanoLista = get_size(L);
+   int* elemento = first(L);
+   for(int k = 0; k < tamanoLista; k++){
+      suma += *elemento;// era nesesario desreferenciar :)
+      elemento = next(L);
+
    }
    return suma;
 }
@@ -81,16 +82,14 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-   int total = get_size(L);
-   int* dato = first(L);
-
-   for(int k = 0; k < total; k++)
-   {
-      if (*dato == elem)
+   int tamanoLista = get_size(L);
+   int *elemento = first(L);
+   for(int k = 0; k < tamanoLista; k++){
+      if(*elemento == elem){
          popCurrent(L);
-      dato = next(L);
+      }
+      elemento = next(L);
    }
-
 }
 
 /*
@@ -100,23 +99,7 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
-   Stack* aux = create_list();
-   while(top(P1) != NULL)
-   {
-      void* elemento = top(P1);
-      push(aux, elemento);
-      pop(P1);
-   }
-
-   while(top(aux) != NULL)
-   {
-      void* elemento = top(aux);
-      push(P1,elemento);
-      push(P2,elemento);
-      pop(aux);
-   }
-   free(aux);   
+void copia_pila(Stack*P1, Stack* P2) {
 }
 
 /*
@@ -127,6 +110,6 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   
    return 0;
 }
+
